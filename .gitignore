@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+energy_env
+mlruns
+.mlflow
+.vscode
+.idea

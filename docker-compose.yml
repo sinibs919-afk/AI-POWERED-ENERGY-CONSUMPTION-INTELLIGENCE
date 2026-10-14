@@ -1,0 +1,28 @@
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: Backend/dockerfile.Backend
+
+    container_name: energy_backend
+
+    ports:
+      - "8000:8000"
+
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Frontend/dockerfile.Frontend
+
+    container_name: energy_frontend
+
+    ports:
+      - "8501:8501"
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
